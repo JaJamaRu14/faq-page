@@ -1,3 +1,72 @@
 body {
-  background-color: aqua;
+  font-family: 'Kumbh Sans', sans-serif;
+  font-size: 12px;
+  background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+}
+
+.container {
+  height: 100vh;
+}
+
+.row {
+  height: inherit;
+}
+
+#left-col {
+  background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+  height: 100%;
+  z-index: 100;
+}
+
+#content-box {
+  border-radius: 20px;
+  background-color: #fff;
+}
+
+#img-section {
+  background-image: url(./images/bg-pattern-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: 235%;
+  background-position: right 48px top -316px;
+}
+
+#orange-box {
+  position: relative;
+  top: 222px;
+  left: -105px;
+  z-index: 1000;
+}
+
+#woman-img {
+  position: relative;
+  top: -98px;
+  left: -94px;
+}
+
+h1 {
+  margin-top: 4.4rem;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.accordion {
+  border-bottom: 1px solid #80808047;
+}
+
+.accordion-button::after {
+  /* flex-shrink: 0;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-left: auto;
+  content: ''; */
+  background-image: url(./images/icon-arrow-down.svg);
+  /* background-repeat: no-repeat;
+  background-size: 1.25rem;
+  transition: transform 0.2s ease-in-out; */
+}
+
+.accordion-button:not(.collapsed)::after {
+  background-image: url(./images/icon-arrow-down.svg);
+  /* transform: rotate(180deg); */
 }
