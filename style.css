@@ -21,13 +21,14 @@ body {
 #content-box {
   border-radius: 20px;
   background-color: #fff;
+  width: 70.5%;
 }
 
 #img-section {
   background-image: url(./images/bg-pattern-desktop.svg);
   background-repeat: no-repeat;
-  background-size: 235%;
-  background-position: right 48px top -316px;
+  background-size: 215%;
+  background-position: right 74px top -300px;
 }
 
 #orange-box {
@@ -43,30 +44,129 @@ body {
   left: -94px;
 }
 
+#faq-section {
+  padding-left: 1rem;
+  padding-right: 3rem;
+}
+
 h1 {
   margin-top: 4.4rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   font-weight: 700;
   font-size: 2rem;
 }
 
 .accordion {
+  width: 90%;
   border-bottom: 1px solid #80808047;
+}
+
+.accordion-button {
+  color: hsl(237, 12%, 33%);
+  border: 1px solid #80808047;
+  padding-left: 0;
+  padding-right: 0;
+  font-size: 0.9rem;
+}
+
+.accordion-button:hover {
+  color: hsl(14, 88%, 65%);
+}
+
+.accordion-button:focus {
+  outline: 0;
+  border-color: #80808047;
+  border-bottom: none;
+  box-shadow: none;
 }
 
 .accordion-button::after {
   /* flex-shrink: 0;
-  width: 1.25rem;
   height: 1.25rem;
   margin-left: auto;
   content: ''; */
+  width: 1.6rem;
+  background-size: 0.9rem;
   background-image: url(./images/icon-arrow-down.svg);
+  transform-origin: 25% 25%;
+  /* transform: rotate(0deg); */
   /* background-repeat: no-repeat;
-  background-size: 1.25rem;
+  
   transition: transform 0.2s ease-in-out; */
 }
 
 .accordion-button:not(.collapsed)::after {
   background-image: url(./images/icon-arrow-down.svg);
   /* transform: rotate(180deg); */
+}
+
+.accordion-button:not(.collapsed) {
+  color: inherit;
+  background-color: inherit;
+}
+
+.accordion-flush .accordion-button {
+  border-bottom: 0;
+}
+
+.accordion-body {
+  color: hsl(240, 6%, 50%);
+  padding-top: 0;
+  padding-left: 0;
+}
+
+.strong {
+  font-weight: 700;
+  color: hsl(238, 29%, 16%);
+}
+
+@media (max-width: 400px) {
+  #content-box {
+    width: 86.5%;
+    height: 66%;
+    margin-top: 1rem;
+  }
+
+  #img-section {
+    background-image: url(./images/bg-pattern-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: 72%;
+    background-position: top;
+    height: 29%;
+  }
+
+  #woman-img {
+    position: relative;
+    top: -108px;
+    left: 0px;
+  }
+
+  #faq-section {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  h1 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  .accordion {
+    width: 100%;
+    padding-left: 0.3rem;
+  }
+
+  .accordion-button {
+    font-size: 0.83rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .accordion-button:hover {
+    color: inherit;
+  }
+
+  .accordion-collapse {
+    width: 95%;
+  }
 }

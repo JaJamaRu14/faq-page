@@ -25,10 +25,10 @@
   <body>
     <main class="container">
       <div class="row align-items-center">
-        <div class="col align-self-start" id="left-col"></div>
+        <div class="col" id="left-col"></div>
 
         <!-- Content box start -->
-        <div class="col-sm-8" id="content-box">
+        <div class="col-xs-12 col-sm-8" id="content-box">
           <div class="row">
             <!-- image section -->
             <div class="col-sm-6" id="img-section">
@@ -45,7 +45,7 @@
             </div>
 
             <!-- FAQ section start-->
-            <div class="col-sm-6">
+            <div class="col-sm-6" id="faq-section">
               <h1 id="title">FAQ</h1>
               <!-- FAQ accordion start -->
               <div class="accordion accordion-flush" id="accordionExample">
@@ -53,11 +53,11 @@
                 <div class="accordion-item">
                   <h2 class="accordion-header" id="headingOne">
                     <button
-                      class="accordion-button"
+                      class="accordion-button collapsed"
                       type="button"
                       data-bs-toggle="collapse"
                       data-bs-target="#collapseOne"
-                      aria-expanded="true"
+                      aria-expanded="false"
                       aria-controls="collapseOne"
                     >
                       How many team members can I invite?
@@ -65,7 +65,7 @@
                   </h2>
                   <div
                     id="collapseOne"
-                    class="accordion-collapse collapse show"
+                    class="accordion-collapse collapse"
                     aria-labelledby="headingOne"
                     data-bs-parent="#accordionExample"
                   >
@@ -192,7 +192,7 @@
         </div>
         <!-- Content box end -->
 
-        <div class="col align-self-end"></div>
+        <div class="col"></div>
       </div>
     </main>
 
@@ -202,5 +202,7 @@
       integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
       crossorigin="anonymous"
     ></script>
+    <!-- Custom JS -->
+    <script src="./index.js"></script>
   </body>
 </html>
