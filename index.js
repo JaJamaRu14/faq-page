@@ -13,11 +13,6 @@ buttons.forEach(function (btn) {
 
 const womanImg = document.querySelector('#woman-img');
 
-if (window.innerWidth <= 400) {
-  womanImg.src = './images/illustration-woman-online-mobile.svg';
-  document.querySelector('#orange-box').remove();
-}
-
 window.onresize = switchImg;
 
 function switchImg() {

@@ -1,7 +1,13 @@
+:root {
+  --color-violet: hsl(273, 75%, 66%);
+  --color-blue: hsl(240, 73%, 65%);
+  --color-light-gray: #80808047;
+}
+
 body {
   font-family: 'Kumbh Sans', sans-serif;
   font-size: 12px;
-  background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+  background: linear-gradient(var(--color-violet), var(--color-blue));
 }
 
 .container {
@@ -13,7 +19,7 @@ body {
 }
 
 #left-col {
-  background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+  background: linear-gradient(var(--color-violet), var(--color-blue));
   height: 100%;
   z-index: 100;
 }
@@ -58,12 +64,12 @@ h1 {
 
 .accordion {
   width: 90%;
-  border-bottom: 1px solid #80808047;
+  border-bottom: 1px solid var(--color-light-gray);
 }
 
 .accordion-button {
   color: hsl(237, 12%, 33%);
-  border: 1px solid #80808047;
+  border: 1px solid var(--color-light-gray);
   padding-left: 0;
   padding-right: 0;
   font-size: 0.9rem;
@@ -75,29 +81,20 @@ h1 {
 
 .accordion-button:focus {
   outline: 0;
-  border-color: #80808047;
+  border-color: var(--color-light-gray);
   border-bottom: none;
   box-shadow: none;
 }
 
 .accordion-button::after {
-  /* flex-shrink: 0;
-  height: 1.25rem;
-  margin-left: auto;
-  content: ''; */
   width: 1.6rem;
   background-size: 0.9rem;
   background-image: url(./images/icon-arrow-down.svg);
   transform-origin: 25% 25%;
-  /* transform: rotate(0deg); */
-  /* background-repeat: no-repeat;
-  
-  transition: transform 0.2s ease-in-out; */
 }
 
 .accordion-button:not(.collapsed)::after {
   background-image: url(./images/icon-arrow-down.svg);
-  /* transform: rotate(180deg); */
 }
 
 .accordion-button:not(.collapsed) {
@@ -107,6 +104,10 @@ h1 {
 
 .accordion-flush .accordion-button {
   border-bottom: 0;
+}
+
+.accordion-item:last-of-type .accordion-collapse {
+  border-bottom-width: 0;
 }
 
 .accordion-body {
